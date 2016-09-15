@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * Created by zach on 9/14/16.
  */
@@ -24,5 +27,28 @@ public class Main {
         for (String name : names) {
             System.out.println(name);
         }
+
+        // unboxed -> boxed
+        // int -> Integer
+        // long -> Long
+        // boolean -> Boolean
+
+        ArrayList<String> names2 = new ArrayList();
+        names2.add("Alice");
+        names2.add("Bob");
+        names2.add("Charlie");
+        names2.remove(1);
+        System.out.println(names2);
+
+        HashMap<String, Object> person = new HashMap();
+        person.put("name", "Alice");
+        person.put("age", 30);
+        person.put("location", "Charleston");
+        person.put("name", "Bob");
+        person.remove("age");
+        System.out.println(person);
+
+        String alice = names2.get(0);
+        String bob = (String) person.get("name");
     }
 }
